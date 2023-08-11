@@ -6,3 +6,4 @@ train_chunks.pkl
 train_texts.pkl
 venv
 wandb
+*.zip
