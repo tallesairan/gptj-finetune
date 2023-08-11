@@ -1,7 +1,2 @@
-accelerate
-deepspeed
 jsonlines
 numpy
-torch
-transformers
-wandb

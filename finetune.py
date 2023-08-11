@@ -86,20 +86,20 @@ training_args = TrainingArguments(
     # Gradient accumulation makes up for having a small batch size.
     # See README.md for tuning information. It's tricky on small
     # datasets.
-    gradient_accumulation_steps=32,
+    gradient_accumulation_steps=64,
 
     # The number of epochs to train for.
     num_train_epochs=1,
 
     # Since the default is to train for one epoch, there is no need
     # to save intermediate models.
-    save_strategy="no",
+    #save_strategy="no",
 
     # Uncomment these parameters to save checkpoints.
     # Do this if your model takes over an hour to fine-tune.
     # Otherwise, it is a waste of time and disk I/O.
-    # save_strategy="epoch",
-    # save_total_limit=2,  # Each checkpoint is about 80 GiB on disk.
+    save_strategy="epoch",
+    save_total_limit=2,  # Each checkpoint is about 80 GiB on disk.
 
     # Be careful with this option, as it positively *explodes* DRAM usage
     # for some reason.  It uses nearly 512 GiB of system RAM and swap to
